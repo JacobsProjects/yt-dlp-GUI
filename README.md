@@ -7,6 +7,7 @@ A simple, user-friendly GUI for downloading videos and audio using `yt-dlp`.
 - Download videos or audio in various qualities and formats.
 - Add custom yt-dlp arguments.
 - Monitor progress with a built-in progress bar and logs.
+- Add your cookies.
 
 ## Installation
 
@@ -23,3 +24,8 @@ A simple, user-friendly GUI for downloading videos and audio using `yt-dlp`.
 ## Support
 - Feel free to open a ticket!
 - message me on discord at jc9808! I'll be happy to help
+
+## Screenshot
+
+![Yt-Dlp GUI Screenshot](https://imgur.com/OeGNzIH)
+
