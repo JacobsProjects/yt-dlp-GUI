@@ -19,3 +19,7 @@ A simple, user-friendly GUI for downloading videos and audio using `yt-dlp`.
    ```bash
    python yt-dlpgui.py
    ```
+
+## Support
+- Feel free to open a ticket!
+- message me on discord at jc9808! I'll be happy to help
