@@ -27,5 +27,5 @@ A simple, user-friendly GUI for downloading videos and audio using `yt-dlp`.
 
 ## Screenshot
 
-![Yt-Dlp GUI Screenshot](https://imgur.com/OeGNzIH)
+![Yt-Dlp GUI Screenshot](https://i.imgur.com/OeGNzIH.png)
 
