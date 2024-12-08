@@ -22,7 +22,7 @@ A simple, user-friendly GUI for downloading videos and audio using `yt-dlp`.
    ```
 
 ## Support
-- Feel free to open a ticket!
+- Feel free to open a ticket for support or a suggestion!
 - message me on discord at jc9808! I'll be happy to help
 
 ## Screenshot
