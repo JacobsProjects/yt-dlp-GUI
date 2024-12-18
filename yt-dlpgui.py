@@ -11,6 +11,8 @@ from PyQt5.QtCore import QPropertyAnimation, QRect, QEasingCurve
 from PyQt5.QtCore import Qt
 import logging
 import shlex
+import traceback
+import os
 
 class DownloadThread(QThread):
     progress_signal = pyqtSignal(int, str)
@@ -186,9 +188,14 @@ class YtDlpGUI(QMainWindow):
 
 
     def setupStyles(self):
-        with open('style.qss', 'r') as f:
-            stylesheet = f.read()
-            self.setStyleSheet(stylesheet)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        style_path = os.path.join(script_dir, 'style.qss')
+        try:
+            with open(style_path, 'r') as f:
+                stylesheet = f.read()
+                self.setStyleSheet(stylesheet)
+        except FileNotFoundError:
+            print(f"Could not find style file at: {style_path}")
 
     def upload_cookies(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Upload your cookies")
@@ -234,10 +241,15 @@ class YtDlpGUI(QMainWindow):
 
 
 def main():
-    app = QApplication(sys.argv)
-    main_window = YtDlpGUI()
-    main_window.show()
-    sys.exit(app.exec_())
+    try:
+        app = QApplication(sys.argv)
+        main_window = YtDlpGUI()
+        main_window.show()
+        sys.exit(app.exec_())
+    except Exception as e:
+        print("An error occurred:")
+        traceback.print_exc()
+        input("Press Enter to exit...")
 
 if __name__ == '__main__':
     main()
