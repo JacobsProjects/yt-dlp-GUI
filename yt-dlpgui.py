@@ -76,7 +76,6 @@ class DownloadThread(QThread):
                 ydl_opts['postprocessors'].append({
                     'key': 'FFmpegVideoConvertor',
                     'preferedformat': self.fileextension,
-                    'when': 'always'
                 })
 
                 ydl_opts['postprocessor_args'] = {
